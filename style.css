@@ -129,16 +129,36 @@ footer {
 .contact__form input[type="text"] {
   width: 50%;
 }
+#about {
+  height: 100vh;
+  background-color: #000;
+  border-radius: 10px;
+  color: #f0f0f0;
+  padding: 10px;
+}
 
 .container .about-row {
-  column-gap: 5rem;
+  column-gap: 4.2rem;
   flex-wrap: nowrap;
+}
+.row .image-column .card {
+  margin-top: 5rem;
+  background-color: #000;
+  color: #f0f0f0;
 }
 .row .image-column .card img {
   max-width: 300px;
   margin: auto;
 }
+.about-row .text-details {
+  margin: auto 0;
+  padding: 10px 30px;
+}
 
+#projects {
+  padding: 10px;
+  max-height: 100vh;
+}
 input,
 textarea {
   width: 100%;
@@ -187,5 +207,36 @@ textarea {
   }
   .project {
     width: 100%;
+  }
+}
+
+.container .about-row .text-details {
+  width: 40%;
+}
+.container .about-row .image-column {
+  width: 60%;
+}
+@media (max-width: 600px) {
+  #about {
+    height: fit-content;
+  }
+  .container .about-row {
+    flex-direction: column;
+  }
+  .container .about-row {
+    column-gap: 0;
+  }
+  .container .about-row .text-details,
+  .container .about-row .image-column {
+    width: 100%;
+  }
+  .row .image-column .card {
+    margin-top: 1rem;
+    background-color: transparent;
+    border: none;
+    margin-left: -2rem;
+  }
+  .row .image-column .card img {
+    max-width: 250px;
   }
 }
