@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <div class="container">
-    <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="container">
       <div class="header">
         <h1>My Portfolio</h1>
         <nav>
@@ -21,15 +26,43 @@
           </ul>
         </nav>
       </div>
-      <div class="image"><img src="asset/Timie-fb.jpg" alt="Your Profile Picture" class="profile-image">
-    </div>
+      <div class="image">
+        <img
+          src="asset/Timie-fb.jpg"
+          alt="Your Profile Picture"
+          class="profile-image"
+        />
+      </div>
     </header>
 
-    <main>
+    <main class="container">
       <section id="about">
         <h2>About Me</h2>
-        <p>I am a passionate software developer with 1 year of experience in Frontend and Backend technologies. I am proficient in HTML, CSS, Javascript, Node.js, mongodb and have a strong understanding of software development principles and best practices.</p>
-        <p>I am eager to contribute my skills and knowledge to a challenging and rewarding role where I can make a real impact.</p>
+        <div class="row about-row">
+          <div class="col-6">
+            <p>
+              I am a passionate software developer with years of experience in
+              Frontend and Backend technologies. I am proficient in
+              <b>HTML, CSS, Javascript, Nodejs, mongoDB</b> and have a strong
+              understanding of software development principles and best
+              practices.
+            </p>
+            <p>
+              I am eager to contribute my skills and knowledge to a challenging
+              and rewarding role where I can make a real impact.
+            </p>
+          </div>
+
+          <div class="col-6 image-column">
+            <div class="card" style="width: 30rem;">
+              <img src="./asset/Timi-portfolio-3.JPG" class="card-img-top" alt="portfollio-image" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Olrewaju Timilehin</h5>
+                <p class="card-text">Fullstack Developer</p>
+                <a href="#" class="btn btn-primary">Contact Me</a>
+              </div>
+            </div>
+        </div>
       </section>
 
       <section id="projects">
@@ -37,17 +70,44 @@
         <div class="project-container">
           <div class="project">
             <h3>WellSpring hospital website</h3>
-            <img src="asset/Wellness.png" alt="WellSpring Hospital Website">
-            <p> <b>WellSpring:</b> A haven of health. Our website is designed to be both visually appealing and easy to navigate, providing you with all the information you need about our services, doctors, and patient resources. We've made it simple to schedule appointments online, find contact information, and read what our patients have to say about their experiences at WellSpring. Our website is accessible to everyone and is fully compliant with HIPAA regulations, ensuring your privacy is always protected.</p>
-            <button class="web-btn"><a href="https://splendorous-biscotti-e206e7.netlify.app/" target="_blank">View Wellspring</a></button>
-            
+            <img src="asset/Wellness.png" alt="WellSpring Hospital Website" />
+            <p>
+              <b>WellSpring:</b> A haven of health. Our website is designed to
+              be both visually appealing and easy to navigate, providing you
+              with all the information you need about our services, doctors, and
+              patient resources. We've made it simple to schedule appointments
+              online, find contact information, and read what our patients have
+              to say about their experiences at WellSpring. Our website is
+              accessible to everyone and is fully compliant with HIPAA
+              regulations, ensuring your privacy is always protected.
+            </p>
+            <button class="web-btn">
+              <a
+                href="https://splendorous-biscotti-e206e7.netlify.app/"
+                target="_blank"
+                >View Wellspring</a
+              >
+            </button>
           </div>
           <div class="project">
             <h3>SkillForge Website</h3>
-            <img src="asset/skillForge.png" alt="SkillForge Website">
-            <p> <b>SkillForge:</b> Forge your future in tech. At SkillForge, we empower individuals with in-demand skills to succeed in the ever-evolving tech landscape. Our website provides you with all the information you need about our programs, instructors, career services, and more. Explore our dynamic curriculum, learn about our flexible learning options, and connect with our supportive community. SkillForge: Where passion meets potential.</p>
-            <button class="web-btn"> <a href="https://celebrated-nougat-491268.netlify.app/" target="_blank">View Skillforge</a></button>
-           
+            <img src="asset/skillForge.png" alt="SkillForge Website" />
+            <p>
+              <b>SkillForge:</b> Forge your future in tech. At SkillForge, we
+              empower individuals with in-demand skills to succeed in the
+              ever-evolving tech landscape. Our website provides you with all
+              the information you need about our programs, instructors, career
+              services, and more. Explore our dynamic curriculum, learn about
+              our flexible learning options, and connect with our supportive
+              community. SkillForge: Where passion meets potential.
+            </p>
+            <button class="web-btn">
+              <a
+                href="https://celebrated-nougat-491268.netlify.app/"
+                target="_blank"
+                >View Skillforge</a
+              >
+            </button>
           </div>
         </div>
       </section>
@@ -96,21 +156,35 @@
           <textarea
             name="Message"
             rows="7"
-            placeholder="Message"
+            placeholder="Tell us what I can do for you"
             required
           ></textarea>
           <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-  
-          <p>Email: timilehinolarewaju@gmail.com</p>
-          <p>Phone: +2349132875166</p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/olarewaju-timilehin-4044452a6/" target="_blank">Check Linkedin Page</a></p>
-          <p>GitHub: <a href="https://github.com/Oluwatimie97" target="_blank">Check Github here</a></p>
+        </form>
+
+        <p>Email: timilehinolarewaju@gmail.com</p>
+        <p>Phone: +2349132875166</p>
+        <p>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/olarewaju-timilehin-4044452a6/"
+            target="_blank"
+            >Check Linkedin Page</a
+          >
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/Oluwatimie97" target="_blank"
+            >Check Github here</a
+          >
+        </p>
       </section>
-  
-      <footer>
-          <p>&copy; Tim-Dev 2024</p>
-      </footer>
-  
+    </main>
+
+    <footer class="container">
+      <p>&copy; Tim-Dev 2024</p>
+    </footer>
+
+    <script src="./JS/bootstrap.min.js"></script>
   </body>
-  </html>
+</html>

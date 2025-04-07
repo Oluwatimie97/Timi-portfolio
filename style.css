@@ -12,12 +12,9 @@ body {
   display: flex; /* Use flexbox for full-page layout */
   flex-direction: column;
   min-height: 100vh; /* Ensure the page takes up full viewport height */
-}
-
-.container {
-  flex: 1; /* Allow content to grow to fill available space */
-  max-width: 960px; /* Set a maximum width for content */
-  margin: 0 auto; /* Center content horizontally */
+  background-color: #f8f9fa; /* Light gray background color */
+  color: #333; /* Dark gray text color */
+  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -56,7 +53,7 @@ header {
 
 nav ul {
   list-style: none;
-  padding: 0;
+  padding: 10px;
 }
 
 nav ul li {
@@ -66,8 +63,12 @@ nav ul li {
 
 nav a {
   color: #333;
+  text-decoration: none;
+  padding: 10px;
 }
-
+nav ul li a:hover {
+  background-color: #fff;
+}
 .project-container {
   display: flex;
   flex-wrap: wrap;
@@ -127,6 +128,15 @@ footer {
 
 .contact__form input[type="text"] {
   width: 50%;
+}
+
+.container .about-row {
+  column-gap: 5rem;
+  flex-wrap: nowrap;
+}
+.row .image-column .card img {
+  max-width: 300px;
+  margin: auto;
 }
 
 input,
