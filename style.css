@@ -69,35 +69,22 @@ nav a {
 nav ul li a:hover {
   background-color: #fff;
 }
+.projects-row {
+  margin-bottom: 2rem;
+}
 .project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.project {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
-  width: 45%;
-  text-align: center;
+.project-card {
+  position: relative;
+  height: 400px;
 }
-
-.project img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-.project .web-btn {
-  border: none;
-  padding: 10px 20px;
-  background-color: #f0f0f0;
-  color: #333;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.project .web-btn:hover {
-  background-color: #e0e0e0;
+.project-card .project-button {
+  position: absolute;
+  bottom: 10px;
+  left: 30% !important;
 }
 
 footer {
@@ -136,23 +123,60 @@ footer {
   color: #f0f0f0;
   padding: 10px;
 }
-
-.container .about-row {
-  column-gap: 4.2rem;
-  flex-wrap: nowrap;
+.container .about-me {
+  margin-top: 10px;
+  position: relative;
+  max-width: fit-content;
 }
+.container .about-me::after {
+  content: "";
+  background: linear-gradient(to right, red, blue);
+  border-radius: 2px;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .row .image-column .card {
-  margin-top: 5rem;
+  margin: 5rem 0 0 5rem;
   background-color: #000;
   color: #f0f0f0;
 }
+
 .row .image-column .card img {
   max-width: 300px;
   margin: auto;
 }
+
 .about-row .text-details {
   margin: auto 0;
   padding: 10px 30px;
+}
+
+.fullstack {
+  color: green;
+}
+.letter {
+  display: inline-block;
+  opacity: 0;
+  color: rgb(146, 100, 100);
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #projects {
@@ -197,7 +221,7 @@ textarea {
 
 /*========= MEDIA QUERIES TABLET ======*/
 
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   header {
     flex-direction: column;
     margin-bottom: 20px;
@@ -209,14 +233,30 @@ textarea {
     width: 100%;
   }
 }
-
+.container .about-row {
+  flex-wrap: nowrap;
+}
 .container .about-row .text-details {
   width: 40%;
 }
 .container .about-row .image-column {
   width: 60%;
 }
-@media (max-width: 600px) {
+.container .about-row .image-column .card {
+  background-color: transparent;
+  border: none;
+  margin: 5rem auto 0;
+}
+.project-card {
+  width: 48%;
+}
+.project-card .project-button {
+  position: absolute;
+  bottom: 10px;
+  left: 15%;
+}
+
+@media only screen and (max-width: 768px) {
   #about {
     height: fit-content;
   }
@@ -230,13 +270,20 @@ textarea {
   .container .about-row .image-column {
     width: 100%;
   }
-  .row .image-column .card {
-    margin-top: 1rem;
-    background-color: transparent;
-    border: none;
-    margin-left: -2rem;
+  .container .about-row .image-column {
+    text-align: center;
+    display: block;
+  }
+  .container .about-row .image-column .card {
+    width: 15rem !important;
   }
   .row .image-column .card img {
     max-width: 250px;
   }
+}
+.projects-row {
+  overflow: scroll;
+}
+.skills-row {
+  margin-top: 2rem;
 }

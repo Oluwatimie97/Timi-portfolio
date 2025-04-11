@@ -36,15 +36,17 @@
     </header>
 
     <main class="container">
-      <section id="about">
-        <h2>About Me</h2>
+      <section id="about" class="row">
+        <div class="col-12">
+          <h2 class="about-me">About Me</h2>
+        </div>
         <div class="row about-row">
           <div class="col-6 text-details">
-            <h1>I am a Fullstack Web developer</h1>
+            <h1 id="sentence"></h1>
             <p>
               I am a passionate web application developer with years of experience in
               Frontend and Backend technologies. I am proficient in
-              <b>HTML, CSS, Javascript, Nodejs, mongoDB</b> and have a strong
+              <b> <i>HTML, CSS, Javascript, Nodejs, mongoDB</i></b> and have a strong
               understanding of software development principles and best
               practices.
             </p>
@@ -66,65 +68,54 @@
         </div>
       </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-          <div class="project">
-            <h3>WellSpring hospital website</h3>
-            <img src="asset/Wellness.png" alt="WellSpring Hospital Website" />
-            <p>
-              <b>WellSpring:</b> A haven of health. Our website is designed to
-              be both visually appealing and easy to navigate, providing you
-              with all the information you need about our services, doctors, and
-              patient resources. We've made it simple to schedule appointments
-              online, find contact information, and read what our patients have
-              to say about their experiences at WellSpring. Our website is
-              accessible to everyone and is fully compliant with HIPAA
-              regulations, ensuring your privacy is always protected.
-            </p>
-            <button class="web-btn">
-              <a
-                href="https://splendorous-biscotti-e206e7.netlify.app/"
-                target="_blank"
-                >View Wellspring</a
-              >
-            </button>
-          </div>
-          <div class="project">
-            <h3>SkillForge Website</h3>
-            <img src="asset/skillForge.png" alt="SkillForge Website" />
-            <p>
-              <b>SkillForge:</b> Forge your future in tech. At SkillForge, we
-              empower individuals with in-demand skills to succeed in the
-              ever-evolving tech landscape. Our website provides you with all
-              the information you need about our programs, instructors, career
-              services, and more. Explore our dynamic curriculum, learn about
-              our flexible learning options, and connect with our supportive
-              community. SkillForge: Where passion meets potential.
-            </p>
-            <button class="web-btn">
-              <a
-                href="https://celebrated-nougat-491268.netlify.app/"
-                target="_blank"
-                >View Skillforge</a
-              >
-            </button>
-          </div>
+      <section id="projects" class="row projects-row">
+        <div class="col-12">
+          <h2>Projects</h2>
+        </div>
+        <div class="project-container row">
+          
         </div>
       </section>
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Node.js</li>
-          <li>React</li>
-          <li>Mongodb</li>
-          <li>Saas</li>
-          <li>Bootstrap</li>
-        </ul>
+      <section id="skills" class="row skills-row">
+        <div class="col-12">
+          <h2>Skills</h2>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Basic</th>
+              <th scope="col">Intermediate</th>
+              <th scope="col">Advanced</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Canva</td>
+              <td>Bootstrap </td>
+              <td>Javascript</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Figma</td>
+              <td>CSS PREPROCESSOR SAAS</td>
+              <td>ReactJs</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>HTML</td>
+              <td>Tailwind CSS</td>
+              <td>NodeJs</td>
+            </tr>
+            <th scope="row">4</th>
+            <td>CSS</td>
+            <td>CMS (Wordpress & Wix)</td>
+            <td>Python</td>
+          </tr>
+          </tbody>
+        </table>
       </section>
 
       <section id="contact">
@@ -157,7 +148,7 @@
           <textarea
             name="Message"
             rows="7"
-            placeholder="Tell us what I can do for you"
+            placeholder="Tell me what I can do for you"
             required
           ></textarea>
           <button type="submit" class="btn btn-primary">Send Message</button>
@@ -187,5 +178,6 @@
     </footer>
 
     <script src="./JS/bootstrap.min.js"></script>
+    <script type="module" src="./JS/index.js"></script>
   </body>
 </html>
